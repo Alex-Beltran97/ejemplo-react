@@ -14,7 +14,7 @@ const obj = {
   //     'PT Sans', 
   //     "sans-serif"      
   //   ].join(','),
-  // },
+  // }
 };
 
 export { obj };
