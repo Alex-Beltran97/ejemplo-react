@@ -1,5 +1,5 @@
-import { Formik, Form } from "formik";
-import { Button, Stack } from "@mui/material";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Button, Stack, Typography } from "@mui/material";
 import * as Yup from "yup";
 import Fields from "./Fields";
 
@@ -14,6 +14,8 @@ const validationSchema = Yup.object().shape({
     .matches(pwdRegex,"Contraseña invalida")
     .required("El campo Password no puede ir vacio")
     .trim(),
+  cities:Yup.string()
+    .required("Por favor seleccione una opcion"),
 });
 
 export default () => {
@@ -21,6 +23,7 @@ export default () => {
     <Formik
       initialValues={{
         email:"",
+        cities:"",
         password:""
       }}
 
@@ -46,6 +49,18 @@ export default () => {
                 handleBlur
               }}
             />
+            <select 
+              name="cities"
+              id="cities"
+              onChange={ handleChange } 
+              onBlur={ handleBlur }
+            >
+              <option value="">Choose one</option>
+              <option value="Paris">Paris</option>
+              <option value="Madrid">Madrid</option>
+              <option value="Nueva York">Nueva York</option>
+            </select>
+            <ErrorMessage name="cities" render={(msg)=>(<ErrorMsg msg={ msg }/>)} />
             <Fields 
               label="Password:"
               ariaDescribedby="pwd-helper"
@@ -67,3 +82,7 @@ export default () => {
     </Formik>
   </>)
 };
+
+const ErrorMsg = ({msg})=>(
+  <Typography variant="subtitle1" color="green">{ msg }</Typography>
+)

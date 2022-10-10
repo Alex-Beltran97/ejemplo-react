@@ -1,6 +1,6 @@
 import { Container, Typography } from "@mui/material";
 import Form from "../components/FormExample/Form";
-import Form2 from "../components/FormExample/Form2";
+// import Form2 from "../components/FormExample/Form2";
 
 const FormExample = () => {
   return (<>
