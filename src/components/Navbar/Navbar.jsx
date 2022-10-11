@@ -9,8 +9,10 @@ import { IoReorderThreeSharp } from "react-icons/io5";
 import { Stack } from '@mui/material';
 import { Link } from 'react-router-dom';
 import "./index.css";
+import LinkPages from './LinkPages';
 
 export default function ButtonAppBar() {
+  
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color='secondary'>
@@ -27,13 +29,7 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News
           </Typography>
-          <Stack direction="row" alignItems="center" justifyContent="center" spacing={ 4 }>
-            <Link className="link" style={{ textDecoration:"none" }} to="/home">Home</Link>
-            <Link className="link" style={{ textDecoration:"none" }} to="/pagina1">Pagina1</Link>
-            <Link className="link" style={{ textDecoration:"none" }} to="/pagina2">Pagina2</Link>
-            <Link className="link" style={{ textDecoration:"none" }} to="/pagina3">Pagina2</Link>
-            <Link className="link" style={{ textDecoration:"none" }} to="/formulario">Formulario</Link>
-          </Stack>
+          <LinkPages />
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
