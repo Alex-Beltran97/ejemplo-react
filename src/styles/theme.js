@@ -9,13 +9,21 @@ const obj = {
       main:"#fff"
     }
   },
-  // typography: {
-  //   fontFamily: [
-  //     'PT Sans', 
-  //     "sans-serif"      
-  //   ].join(','),
-  // }
+  typography: {
+    fontFamily: [
+      'Silkscreen', 
+      "cursive"
+    ].join(','),
+  }
 };
 
-export { obj };
+const modalStyle = {
+  width:"50%",
+  position:"absolute",
+  top:"16%",
+  left:"24%",
+  padding:"1rem"
+};
+
+export { obj, modalStyle };
 
