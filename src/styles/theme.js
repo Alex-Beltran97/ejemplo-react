@@ -11,8 +11,7 @@ const obj = {
   },
   typography: {
     fontFamily: [
-      'Silkscreen', 
-      "cursive"
+      'Nunito', "sans-serif"
     ].join(','),
   }
 };
