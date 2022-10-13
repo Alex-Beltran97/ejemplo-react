@@ -6,7 +6,7 @@ const pages = [
   {label:"Home", path:"home"},
   {label:"Pagina 1", path:"pagina1"},
   {label:"Pagina 2", path:"pagina2"},
-  {label:"Pagina 3", path:"pagina3"},
+  {label:"Providers", path:"providers"},
   {label:"Formulario", path:"formulario"},
 ];
 
